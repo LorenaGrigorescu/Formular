@@ -14,7 +14,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: dodgerblue;
+    background-color: lightblue;
 }
 
 .App {
@@ -37,19 +37,19 @@ section {
     background-color: rgba(0,0,0,0.4);
 }
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     flex-grow: 1;
     padding-bottom: 1rem;
-}
+} */
 
 a, a:visited {
     color: #fff;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="password"],
 button,
 textarea {
@@ -57,7 +57,7 @@ textarea {
   font-size: 22px;
   padding: 0.25rem;
   border-radius: 0.5rem;
-}
+} */
 
 label,
 button {
@@ -91,7 +91,7 @@ button {
     display: none;
 }
 
-.valid {
+/* .valid {
     color: limegreen;
     margin-left: 0.25rem;
 }
@@ -99,9 +99,9 @@ button {
 .invalid {
     color: red;
     margin-left: 0.25rem;
-}
+} */
 
-.errmsg {
+/* .errmsg {
     background-color: lightpink;
     color: firebrick;
     font-weight: bold;
@@ -111,4 +111,78 @@ button {
 
 .line {
     display: inline-block;
+} */
+
+/* select{
+    width: 200px;
+    height: 30px;
+} */
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#duration{
+    width: 385px;
+}
+
+select{
+    text-align-last:left;
+    padding-right: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+}
+
+option{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+
+}
+
+.valid{
+    border-color: black;
+}
+
+.notValid{
+    border-color: red;
+}
+
+.alert alert-warning alert-dismissible fade show{
+    font-size: smaller;
+}
+h1{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+}
+span{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: big;
+    align-self: center;
+    color: black;
+
+}
+
+.error{
+    font-size: medium;
+    color: black;
+}
+#mainDiv{
+    border-radius: 2px solid black;
+}
+
+.ok{
+    font-size: medium;
+    color: black;
+}
+
+.moveRight {
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+    display: flex;
 }
