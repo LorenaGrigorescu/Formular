@@ -1,19 +1,24 @@
-import Register from './components/Register';
-import Login from './components/Login';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Register from "./components/Register";
+import Login from "./components/Login";
+import Children from "./components/Children";
+import ChildPhoto from "./components/ChildPhoto";
+import UserPhoto from "./components/UserPhoto";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
-
   return (
     <Router>
-    <main className="App">
-      <Routes>
+      <main className="App">
+        <Routes>
           <Route path="/" element={<Register />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/children" element={<Children />} />
+          <Route path="/children/:name" element={<ChildPhoto />} />
+          <Route path="/users/:name" element={<UserPhoto />} />
           {/* Add more routes as needed */}
         </Routes>
-    </main>
-  </Router>
+      </main>
+    </Router>
   );
 }
 
