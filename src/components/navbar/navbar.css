@@ -5,13 +5,15 @@
     background-color: #f0f0f0;
     padding: 10px;
     width: 100%;
+    /* background-color: rgb(66, 166, 188); */
+    background-color: #194759;
   }
   
   .navbar-left a img,
   .navbar-right a img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
   }
   
   

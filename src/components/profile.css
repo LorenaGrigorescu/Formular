@@ -1,0 +1,12 @@
+.profile-container{
+    display: flex;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100vw;
+}
+.verifyButton{
+    margin-left: 170px;
+}

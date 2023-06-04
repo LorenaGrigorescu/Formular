@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import axios from "../api/axios";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
+import Navbar from "./navbar/Navbar";
 
 const CHILDREN_URL = "/api/children";
 
@@ -43,7 +44,7 @@ function TitlebarBelowImageList({ childrenData }) {
   );
 }
 
-const Children = () => {
+const Children = ({ userData, setUserData }) => {
   const [childrenData, setChildrenData] = useState([]);
 
   useEffect(() => {
@@ -61,10 +62,13 @@ const Children = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Children</h1>
-      <TitlebarBelowImageList childrenData={childrenData} />
-    </div>
+    <>
+      <Navbar />
+      <div className="children">
+        <h1>Children</h1>
+        <TitlebarBelowImageList childrenData={childrenData} />
+      </div>
+    </>
   );
 };
 
