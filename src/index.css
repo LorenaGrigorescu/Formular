@@ -14,7 +14,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: dodgerblue;
+    background-color: #5680E9;
 }
 
 .App {
@@ -111,4 +111,66 @@ button {
 
 .line {
     display: inline-block;
+}
+
+.image-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+.image-box {
+  background-color: white;
+  width: 200px;
+  margin: 5px;
+  border: 2px solid black;
+  padding: 5px;
+  text-align: center;
+}
+
+.custom-image {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+  max-height: 100%;
+}
+
+.image-text-box {
+  color: black;
+  margin-top: 10px;
+}
+
+.image-text-box p {
+  font-size: 12px; 
+  margin: 10px 0;
+}
+
+.child-page-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.child-image-container {
+  flex: 0 0 auto;
+  margin-right: 20px;
+  text-align: center;
+}
+
+.child-image {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border: 2px solid white;
+}
+
+.child-info-container {
+  flex: 1;
+}
+
+.child-info-container h2 {
+  margin-top: 0;
+}
+
+.child-info-container p {
+  margin: 0;
 }
