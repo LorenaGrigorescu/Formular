@@ -3,6 +3,8 @@ import Login from "./components/Login";
 import Children from "./components/Children";
 import ChildPhoto from "./components/ChildPhoto";
 import UserPhoto from "./components/UserPhoto";
+import Profile from "./components/Profile";
+import Search from "./components/Search";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {

@@ -5,7 +5,7 @@ function Profile() {
     <>
       <Navbar />
       <h1>Profile</h1>
-      <Map />
+      <Map center={{ lat: 46.77499425393059, lng: 23.6216376366903 }} />
     </>
   );
 }
