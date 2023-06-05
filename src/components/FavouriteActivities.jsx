@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import './FavouriteActivities.css'; // Importați fișierul CSS
+import React, { useState } from "react";
+import "./FavouriteActivities.css"; // Importați fișierul CSS
 
 function FavouriteActivities({ activities }) {
   const handleMouseEnter = (event) => {
-    event.target.classList.add('hovered');
+    event.target.classList.add("hovered");
   };
 
   const handleMouseLeave = (event) => {
-    event.target.classList.remove('hovered');
+    event.target.classList.remove("hovered");
   };
-
+  if (!activities) return <div>No activities</div>;
   return (
     <div className="fragment">
       <p className="heading">Favourite activities</p>

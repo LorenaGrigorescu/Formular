@@ -63,7 +63,7 @@ const Children = ({ userData, setUserData }) => {
 
   return (
     <>
-      <Navbar />
+      <Navbar userData={userData} setUserData={setUserData} />
       <div className="children">
         <h1>Children</h1>
         <TitlebarBelowImageList childrenData={childrenData} />

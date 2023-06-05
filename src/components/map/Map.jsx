@@ -1,7 +1,9 @@
 import { useState, useMemo, useEffect } from "react";
 import { GoogleMap, useLoadScript, MarkerF } from "@react-google-maps/api";
 import "./map.css";
-function Map({ center }) {
+function Map({ lat, lng }) {
+  const center = { lat: lat, lng: lng };
+  console.log(center);
   const { isLoaded } = useLoadScript({
     googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY,
   });

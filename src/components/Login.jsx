@@ -38,9 +38,11 @@ const Login = ({ userData, setUserData }) => {
           headers: { "Content-Type": "application/json" },
         }
       );
-      console.log(response?.data);
-      console.log(response?.accessToken);
-      console.log(JSON.stringify(response));
+      console.log(response.data);
+      setUserData(response.data);
+      setTimeout(() => {
+        navigate(`/profile/:${userData.username}`);
+      }, 1000);
     } catch (err) {
       if (!err?.response) {
         setErrMsg("No Server Response");
@@ -51,7 +53,6 @@ const Login = ({ userData, setUserData }) => {
       }
       errRef.current.focus();
     }
-    navigate("/profile");
   };
 
   return (

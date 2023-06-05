@@ -1,6 +1,4 @@
 .list-group-container {
-  position: fixed;
-  bottom: 10px;
   left: 10px;
 }
 
@@ -21,8 +19,6 @@
 }
 
 .fragment {
-  position: fixed;
-  bottom: 10px;
   left: 10px;
 }
 

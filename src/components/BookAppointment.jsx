@@ -5,17 +5,15 @@ const PROFILE_URL = "/api/users/profile";
 const ACTIVITIES_URL = "/api/activities";
 const USERS_URL = "/api/users";
 const CHILDREN_URL = "/api/children";
-const BookAppointment = () => {
+const BookAppointment = ({ child }) => {
   const [date, setDate] = useState("");
   const [duration, setDuration] = useState("0");
   const [description, setDescription] = useState("");
-  const [copyChildrenName, setCopyChildrenName] = useState([]);
   const [currentChild, setCurrentChild] = useState("");
   const [userData, setUserData] = useState("");
   const [validDate, setValidDate] = useState("valid");
   const [validDuration, setValidDuration] = useState("valid");
   const [validDescription, setValidDescription] = useState("valid");
-  const [validChildName, setValidChildName] = useState("valid");
   const [childName, setChildName] = useState("");
   const [validationFlag, setValidationFlag] = useState(true);
   const [flag, setFlag] = useState(false);
@@ -85,7 +83,7 @@ const BookAppointment = () => {
           ACTIVITIES_URL,
           JSON.stringify({
             adultName: userData.username,
-            childName: currentChild,
+            childName: child.name,
             activityDate: date,
             duration: duration,
             description: description,
@@ -166,24 +164,6 @@ const BookAppointment = () => {
             value={description}
             required
           />
-        </div>
-        <div className="input-group flex-nowrap">
-          <span>Child:</span>
-          <select
-            onChange={(e) => {
-              setValidationFlag(true);
-              setCurrentChild(e.target.value);
-              setChildName(e.target.value);
-            }}
-            aria-label="description"
-            aria-describedby="addon-wrapping"
-            className={`form-select ${validChildName}`}
-          >
-            <option style={{ display: "none" }}>Choose a child:</option>
-            {copyChildrenName.map((child) => (
-              <option key={child.id[0]}>{child.name}</option>
-            ))}
-          </select>
         </div>
         {!validationFlag && (
           <div

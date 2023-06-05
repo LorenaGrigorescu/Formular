@@ -1,12 +1,17 @@
-.profile-container{
+.up-container{
     display: flex;
     margin-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
-    align-items: flex-end;
+    align-items: center;
     justify-content: space-between;
     width: 100vw;
 }
 .verify-button{
     margin-left: 170px;
+}
+.description{
+    margin: 35px;
+    height: 100px;
+    width: 350px;
 }

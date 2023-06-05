@@ -4,7 +4,7 @@ import Children from "./components/Children";
 import ChildPhoto from "./components/ChildPhoto";
 import UserPhoto from "./components/UserPhoto";
 import Profile from "./components/Profile";
-import Search from "./components/Search";
+import Child from "./components/Child";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { useState } from "react";
 
@@ -16,21 +16,24 @@ function App() {
         <Routes>
           <Route
             path="/register"
-            element={<Register user={userData} setUserData={setUserData} />}
+            element={<Register userData={userData} setUserData={setUserData} />}
           />
           <Route
             path="/login"
-            element={<Login user={userData} setUserData={setUserData} />}
+            element={<Login userData={userData} setUserData={setUserData} />}
           />
           <Route
             path="/children"
-            element={<Children user={userData} setUserData={setUserData} />}
+            element={<Children userData={userData} setUserData={setUserData} />}
           />
-          <Route path="/children/:name" element={<ChildPhoto />} />
+          <Route
+            path="/children/:name"
+            element={<Child userData={userData} setUserData={setUserData} />}
+          />
           <Route path="/users/:name" element={<UserPhoto />} />
           <Route
             path="/profile/:username"
-            element={<Profile user={userData} setUserData={setUserData} />}
+            element={<Profile userData={userData} setUserData={setUserData} />}
           />
         </Routes>
       </main>
