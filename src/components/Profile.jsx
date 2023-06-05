@@ -28,6 +28,9 @@ const Profile = ({ userData, setUserData }) => {
     getAllActivities();
   }, [userData]);
 
+  const handleVerify = () => {
+    window.open("https://forms.gle/txozndKyXwL9o9TU9", "_blank");
+  };
   return (
     <>
       <Navbar userData={userData} setUserData={setUserData} />
@@ -36,7 +39,7 @@ const Profile = ({ userData, setUserData }) => {
         <Map lat={userData.lat} lng={userData.lng} />
       </div>
       {!userData.verified && (
-        <button type="button" className="verify-button btn-outline-info">
+        <button type="button" className="eval-button" onClick={handleVerify}>
           Verify
         </button>
       )}

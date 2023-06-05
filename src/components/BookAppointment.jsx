@@ -6,7 +6,8 @@ const PROFILE_URL = "/api/users/profile";
 const ACTIVITIES_URL = "/api/activities";
 const USERS_URL = "/api/users";
 const CHILDREN_URL = "/api/children";
-const BookAppointment = ({ child }) => {
+
+const BookAppointment = ({ child, userdata }) => {
   const [date, setDate] = useState("");
   const [duration, setDuration] = useState("0");
   const [description, setDescription] = useState("");
@@ -18,12 +19,14 @@ const BookAppointment = ({ child }) => {
   const [childName, setChildName] = useState("");
   const [validationFlag, setValidationFlag] = useState(true);
   const [flag, setFlag] = useState(false);
+  const [username, setUsername] = useState("");
 
   var childrenName;
-  const username = "__loraa__";
+  //const username = "__loraa__";
 
   useEffect(() => {
     getUserData(username);
+    setUsername(userdata.username);
     getChildren();
   }, []);
   function validateActivityDate(date) {
@@ -78,7 +81,7 @@ const BookAppointment = ({ child }) => {
         const response = await axios.post(
           ACTIVITIES_URL,
           JSON.stringify({
-            adultName: userData.username,
+            adultName: userdata.username,
             childName: child.name,
             activityDate: date,
             duration: duration,
@@ -100,9 +103,7 @@ const BookAppointment = ({ child }) => {
       <h1>Programeaza intalnire</h1>
       <form>
         <div className="input-group flex-nowrap">
-          <span className="formStyling">
-            Data intalnirii:
-          </span>
+          <span className="formStyling">Data intalnirii:</span>
           <input
             className={`form-control ${validDate}`}
             aria-label="date"
@@ -119,7 +120,9 @@ const BookAppointment = ({ child }) => {
           />
         </div>
         <div className="input-group flex-nowrap">
-          <span className="formStyling" htmlFor="duration">Durata: </span>
+          <span className="formStyling" htmlFor="duration">
+            Durata:{" "}
+          </span>
           <select
             id="duration"
             onChange={(e) => {
@@ -130,8 +133,8 @@ const BookAppointment = ({ child }) => {
             aria-label="duration"
             aria-describedby="addon-wrapping"
           >
-            <option selected style={{ display: "none"}}>
-               Durata activitatii
+            <option selected style={{ display: "none" }}>
+              Durata activitatii
             </option>
             <option value={1}>1</option>
             <option value={2}>2</option>
@@ -146,21 +149,26 @@ const BookAppointment = ({ child }) => {
           </select>
         </div>
         <div className="input-group flex-nowrap">
-          <div><span className="formStyling" htmlFor="description">Raport activitati: </span></div>
-          <div><textarea
-            width={"50px"}
-            type="text"
-            id="description"
-            aria-label="description"
-            aria-describedby="addon-wrapping"
-            onChange={(e) => {
-              setDescription(e.target.value);
-              setValidationFlag(true);
-            }}
-            className={`raportActivitate form-control ${validDescription}`}
-            value={description}
-            required
-          />
+          <div>
+            <span className="formStyling" htmlFor="description">
+              Raport activitati:{" "}
+            </span>
+          </div>
+          <div>
+            <textarea
+              width={"50px"}
+              type="text"
+              id="description"
+              aria-label="description"
+              aria-describedby="addon-wrapping"
+              onChange={(e) => {
+                setDescription(e.target.value);
+                setValidationFlag(true);
+              }}
+              className={`raportActivitate form-control ${validDescription}`}
+              value={description}
+              required
+            />
           </div>
         </div>
         {!validationFlag && (
