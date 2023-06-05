@@ -4,6 +4,8 @@ import Children from "./components/Children";
 import ChildPhoto from "./components/ChildPhoto";
 import UserPhoto from "./components/UserPhoto";
 import LandingPage from "./components/LandingPage";
+import Profile from "./components/Profile";
+import Search from "./components/Search";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
@@ -17,7 +19,8 @@ function App() {
           <Route path="/children" element={<Children />} />
           <Route path="/children/:name" element={<ChildPhoto />} />
           <Route path="/users/:name" element={<UserPhoto />} />
-          {/* Add more routes as needed */}
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/search" element={<Search />} />
         </Routes>
       </main>
     </Router>

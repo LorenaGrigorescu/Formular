@@ -1,0 +1,22 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    width: 100%;
+  }
+  
+  .navbar-left a img,
+  .navbar-right a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
+  
+  
+  .navbar-right img {
+    margin-right: 0;
+    margin-left: 10px;
+  }
+  

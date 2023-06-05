@@ -1,0 +1,60 @@
+.list-group-container {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+.list-group {
+  list-style-type: none;
+  padding: 0;
+}
+
+.list-item {
+  font-size: 16px;
+  font-family: Arial;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: #194759;
+}
+
+.fragment {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+}
+
+.heading {
+  font-size: 20px;
+  font-family: Helvetica;
+  text-decoration: underline;
+}
+
+.listItem {
+  font-size: 16px;
+  font-family: Helvetica;
+  margin: 5px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.listItem:hover,
+.hovered {
+  background-color: #7EBFB3;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #194759;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 10px;
+}
+

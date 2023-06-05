@@ -14,7 +14,7 @@ html {
 
 body {
     min-height: 100vh;
-    background-color: #5680E9;
+    background-color: lightblue;
 }
 
 .App {
@@ -37,19 +37,19 @@ section {
     background-color: rgba(0,0,0,0.4);
 }
 
-form {
+/* form {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     flex-grow: 1;
     padding-bottom: 1rem;
-}
+} */
 
 a, a:visited {
     color: #fff;
 }
 
-input[type="text"],
+/* input[type="text"],
 input[type="password"],
 button,
 textarea {
@@ -57,7 +57,7 @@ textarea {
   font-size: 22px;
   padding: 0.25rem;
   border-radius: 0.5rem;
-}
+} */
 
 label,
 button {
@@ -91,7 +91,7 @@ button {
     display: none;
 }
 
-.valid {
+/* .valid {
     color: limegreen;
     margin-left: 0.25rem;
 }
@@ -99,9 +99,9 @@ button {
 .invalid {
     color: red;
     margin-left: 0.25rem;
-}
+} */
 
-.errmsg {
+/* .errmsg {
     background-color: lightpink;
     color: firebrick;
     font-weight: bold;
@@ -111,66 +111,85 @@ button {
 
 .line {
     display: inline-block;
-}
+} */
 
-.image-list-container {
+/* select{
+    width: 200px;
+    height: 30px;
+} */
+
+form{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    flex-direction: column;
     justify-content: center;
-  }
-  
-.image-box {
-  background-color: white;
-  width: 200px;
-  margin: 5px;
-  border: 2px solid black;
-  padding: 5px;
-  text-align: center;
 }
 
-.custom-image {
-  width: auto;
-  height: 100%;
-  object-fit: contain;
-  max-height: 100%;
+#duration{
+    width: 385px;
 }
 
-.image-text-box {
-  color: black;
-  margin-top: 10px;
+select{
+    text-align-last:left;
+    padding-right: 35px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
 }
 
-.image-text-box p {
-  font-size: 12px; 
-  margin: 10px 0;
+option{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+
 }
 
-.child-page-container {
-  display: flex;
-  align-items: flex-start;
+.valid{
+    border-color: black;
 }
 
-.child-image-container {
-  flex: 0 0 auto;
-  margin-right: 20px;
-  text-align: center;
+.notValid{
+    border-color: red;
 }
 
-.child-image {
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  border: 2px solid white;
+.alert alert-warning alert-dismissible fade show{
+    font-size: smaller;
+}
+h1{
+    text-align: center;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+}
+span{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: big;
+    align-self: center;
+    color: black;
+
 }
 
-.child-info-container {
-  flex: 1;
+.error{
+    font-size: medium;
+    color: black;
+}
+#mainDiv{
+    border-radius: 2px solid black;
 }
 
-.child-info-container h2 {
-  margin-top: 0;
+.ok{
+    font-size: medium;
+    color: black;
 }
-
-.child-info-container p {
+.moveRight {
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+    display: flex;
   margin: 0;
+}
+
+.moveRight {
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+    display: flex;
 }
