@@ -280,13 +280,15 @@ const Register = ({ userData, setUserData }) => {
                 Sign Up
               </button>
             </form>
+            <div className="registerLine">
             <p>
               Already registered?
               <br />
-              <span className="line">
+              <span>
                 <Link to="/login">Sign In</Link>
               </span>
             </p>
+            </div>
           </section>
         </div>
       )}

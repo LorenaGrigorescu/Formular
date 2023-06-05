@@ -88,6 +88,7 @@ const Login = ({ userData, setUserData }) => {
           />
           <button>Login</button>
         </form>
+        <div className="loginLine">
         <p>
           Not registered yet?
           <br />
@@ -95,6 +96,7 @@ const Login = ({ userData, setUserData }) => {
             <Link to="/">Sign Up</Link>
           </span>
         </p>
+        </div>
       </section>
     </div>
   );

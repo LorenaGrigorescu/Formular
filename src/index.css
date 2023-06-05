@@ -34,7 +34,8 @@ section {
     flex-direction: column;
     justify-content: flex-start;
     padding: 1rem;
-    background-color: rgba(0,0,0,0.4);
+    background-color: #194759;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* form {
@@ -309,4 +310,14 @@ span{
 .formStyling{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color:  #194759;
+}
+
+.registerLine {
+  display: inline-block;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.loginLine {
+  display: inline-block;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
