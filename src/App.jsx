@@ -15,6 +15,7 @@ function App() {
     <Router>
       <main className="App">
         <Routes>
+          <Route path="/" element={<LandingPage />} />
           <Route
             path="/register"
             element={<Register userData={userData} setUserData={setUserData} />}
