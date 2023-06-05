@@ -179,6 +179,13 @@ span{
     font-size: medium;
     color: black;
 }
+.moveRight {
+    /* position: absolute;
+    right: 0;
+    bottom: 0; */
+    display: flex;
+  margin: 0;
+}
 
 .moveRight {
     /* position: absolute;

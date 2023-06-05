@@ -3,6 +3,7 @@ import Login from "./components/Login";
 import Children from "./components/Children";
 import ChildPhoto from "./components/ChildPhoto";
 import UserPhoto from "./components/UserPhoto";
+import LandingPage from "./components/LandingPage";
 import Profile from "./components/Profile";
 import Child from "./components/Child";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
