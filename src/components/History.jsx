@@ -6,10 +6,10 @@ function History({ data }) {
     <table className="table-container">
       <thead>
         <tr>
-          <th>Child</th>
-          <th>Date</th>
-          <th>Duration</th>
-          <th>Description</th>
+          <th>Nume copil</th>
+          <th>Data</th>
+          <th>Durata</th>
+          <th>Descriere</th>
         </tr>
       </thead>
       <tbody>

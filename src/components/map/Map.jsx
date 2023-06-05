@@ -18,6 +18,8 @@ function Map({ lat, lng }) {
       >
         <MarkerF position={center} />
       </GoogleMap>
+      <br></br>
+      <br></br>
     </>
   );
 }

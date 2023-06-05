@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from "react";
 import axios from "../api/axios";
 import { Link } from "react-router-dom";
+import { faAlignCenter } from "@fortawesome/free-solid-svg-icons";
 const PROFILE_URL = "/api/users/profile";
 const ACTIVITIES_URL = "/api/activities";
 const USERS_URL = "/api/users";
@@ -41,11 +42,6 @@ const BookAppointment = ({ child }) => {
     setValidDescription(isNotEmpty ? "valid" : "notValid");
     return isNotEmpty;
   }
-  function validateChildName(childName) {
-    const isNotEmpty = childName.length > 0;
-    setValidChildName(isNotEmpty ? "valid" : "notValid");
-    return isNotEmpty;
-  }
   async function getUserData(username) {
     try {
       const response = await axios.get(USERS_URL + "/" + username, {
@@ -73,9 +69,9 @@ const BookAppointment = ({ child }) => {
     var vDate = validateActivityDate(date);
     var vDuration = validateDuration(duration);
     var vDescription = validateDescription(description);
-    var vChildName = validateChildName(childName);
-    const flag = vDate && vDuration && vDescription && vChildName;
+    const flag = vDate && vDuration && vDescription;
     setValidationFlag(flag);
+    console.log(description);
     if (flag) {
       console.log("aici");
       try {
@@ -101,11 +97,11 @@ const BookAppointment = ({ child }) => {
   };
   return (
     <div id="mainDiv" className="text-info bg-dark">
-      <h1>Book appointment</h1>
+      <h1>Programeaza intalnire</h1>
       <form>
         <div className="input-group flex-nowrap">
-          <span className="input-group-text" id="addon-wrapping">
-            Activity date:
+          <span className="formStyling">
+            Data intalnirii:
           </span>
           <input
             className={`form-control ${validDate}`}
@@ -123,7 +119,7 @@ const BookAppointment = ({ child }) => {
           />
         </div>
         <div className="input-group flex-nowrap">
-          <span htmlFor="duration">Duration: </span>
+          <span className="formStyling" htmlFor="duration">Durata: </span>
           <select
             id="duration"
             onChange={(e) => {
@@ -134,8 +130,8 @@ const BookAppointment = ({ child }) => {
             aria-label="duration"
             aria-describedby="addon-wrapping"
           >
-            <option selected style={{ display: "none" }}>
-              Choose how much time you want to spend :
+            <option selected style={{ display: "none"}}>
+               Durata activitatii
             </option>
             <option value={1}>1</option>
             <option value={2}>2</option>
@@ -150,8 +146,9 @@ const BookAppointment = ({ child }) => {
           </select>
         </div>
         <div className="input-group flex-nowrap">
-          <span htmlFor="description">Description: </span>
-          <input
+          <div><span className="formStyling" htmlFor="description">Raport activitati: </span></div>
+          <div><textarea
+            width={"50px"}
             type="text"
             id="description"
             aria-label="description"
@@ -160,10 +157,11 @@ const BookAppointment = ({ child }) => {
               setDescription(e.target.value);
               setValidationFlag(true);
             }}
-            className={`form-control ${validDescription}`}
+            className={`raportActivitate form-control ${validDescription}`}
             value={description}
             required
           />
+          </div>
         </div>
         {!validationFlag && (
           <div
@@ -171,7 +169,7 @@ const BookAppointment = ({ child }) => {
             role="alert"
           >
             <strong>Invalid data! </strong> You should check in on some of those
-            fields below.
+            fields above.
           </div>
         )}
         {flag && (
@@ -183,6 +181,7 @@ const BookAppointment = ({ child }) => {
           </div>
         )}
         <button
+          className="submitButton"
           onClick={(e) => {
             e.preventDefault();
             handleSubmit();

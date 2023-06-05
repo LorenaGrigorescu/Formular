@@ -33,15 +33,26 @@ const Child = ({ userData, setUserData }) => {
     <>
       <Navbar userData={userData} setUserData={setUserData} />
       <div className="up-container">
-        <ChildPhoto childName={childName} />
-        <FavouriteActivities activities={child.favoriteActivities} />
+        <div className="childBio">
+          <ChildPhoto childName={childName} />
+          <div className="description">{child.description}
+        </div>
+      </div>
+      <div className="info-point">
+      <FavouriteActivities activities={child.favoriteActivities} />
+      <br></br>
+      <br></br>
+      <BookAppointment child={child} />
+      </div>
+      <br></br>
+      <br></br>
         <div className="map-child">
+        <h4 className="mapTitle">Unde gasim copilul?</h4>
           <Map lat={child.lat} lng={child.lng} />
         </div>
         {/* descriere */}
       </div>
-      <div className="description">{child.description}</div>
-      <BookAppointment child={child} />
+      
     </>
   );
 };

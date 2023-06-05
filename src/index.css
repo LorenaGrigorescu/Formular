@@ -113,11 +113,6 @@ button {
     display: inline-block;
 } */
 
-/* select{
-    width: 200px;
-    height: 30px;
-} */
-
 form{
     display: flex;
     flex-direction: column;
@@ -135,6 +130,8 @@ select{
     padding-right: 35px;
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
+    text-align: center;
+    align-self: center;
 }
 
 option{
@@ -156,8 +153,6 @@ option{
 }
 h1{
     text-align: center;
-    font-family:'Courier New', Courier, monospace;
-    font-style: italic;
 }
 span{
     font-family: 'Courier New', Courier, monospace;
@@ -171,9 +166,7 @@ span{
     font-size: medium;
     color: black;
 }
-#mainDiv{
-    border-radius: 2px solid black;
-}
+
 
 .ok{
     font-size: medium;
@@ -184,7 +177,7 @@ span{
     right: 0;
     bottom: 0; */
     display: flex;
-  margin: 0;
+    margin: 0;
 }
 
 .moveRight {
@@ -237,9 +230,6 @@ span{
 
 }
 
-
-
-
 .image-text-box {
 
   color: black;
@@ -247,9 +237,6 @@ span{
   margin-top: 10px;
 
 }
-
-
-
 
 .image-text-box p {
 
@@ -260,8 +247,6 @@ span{
 }
 
 
-
-
 .child-page-container {
 
   display: flex;
@@ -270,44 +255,27 @@ span{
 }
 
 
-
-
 .child-image-container {
 
   flex: 0 0 auto;
-
-  margin-right: 20px;
-
   text-align: center;
-
-}
-
-
-
+  padding: 40px;
+  padding-bottom: 0%;
+ }
 
 .child-image {
-
   width: 300px;
-
   height: 300px;
-
   object-fit: cover;
-
   border: 2px solid white;
 
 }
-
-
-
 
 .child-info-container {
 
   flex: 1;
 
 }
-
-
-
 
 .child-info-container h2 {
 
@@ -322,4 +290,23 @@ span{
 
   margin: 0;
 
+}
+
+.raportActivitate {
+  width: 400px;
+  height: 100px;
+}
+
+.submitButton{
+  background-color:  #194759;
+  color:white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  width: 150px;
+  height: 60px;
+  border-radius: 12px;
+}
+
+.formStyling{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:  #194759;
 }

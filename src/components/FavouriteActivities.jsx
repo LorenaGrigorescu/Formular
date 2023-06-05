@@ -12,7 +12,7 @@ function FavouriteActivities({ activities }) {
   if (!activities) return <div>No activities</div>;
   return (
     <div className="fragment">
-      <p className="heading">Favourite activities</p>
+      <h1 className="heading">Activitati preferate:</h1>
       <ul>
         {activities.map((item, index) => (
           <li
