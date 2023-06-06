@@ -6,10 +6,13 @@ import Map from "./map/Map";
 import axios from "../api/axios";
 import ChildPhoto from "./ChildPhoto";
 import FavouriteActivities from "./FavouriteActivities";
+import LandingPage from "./LandingPage";
 
 import "./child.css";
 
 const Child = ({ userData, setUserData }) => {
+  if(Object.keys(userData).length === 0)
+  return <LandingPage></LandingPage>;
   const [child, setChild] = useState({});
   const { name: childName } = useParams();
 

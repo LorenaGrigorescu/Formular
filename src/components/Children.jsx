@@ -4,6 +4,7 @@ import axios from "../api/axios";
 import ImageList from "@mui/material/ImageList";
 import ImageListItem from "@mui/material/ImageListItem";
 import Navbar from "./navbar/Navbar";
+import LandingPage from "./LandingPage";
 
 const CHILDREN_URL = "/api/children";
 
@@ -45,6 +46,10 @@ function TitlebarBelowImageList({ childrenData }) {
 }
 
 const Children = ({ userData, setUserData }) => {
+  
+  if(Object.keys(userData).length === 0)
+    return <LandingPage></LandingPage>;
+
   const [childrenData, setChildrenData] = useState([]);
 
   useEffect(() => {

@@ -6,10 +6,13 @@ import Map from "./map/Map";
 import axios from "../api/axios";
 import UserPhoto from "./UserPhoto";
 import History from "./History";
+import LandingPage from "./LandingPage";
 
 import "./profile.css";
 
 const Profile = ({ userData, setUserData }) => {
+  if(Object.keys(userData).length === 0)
+  return <LandingPage></LandingPage>;
   const [activities, setActivities] = useState([]);
 
   const getAllActivities = () => {
