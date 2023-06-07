@@ -136,22 +136,22 @@ const BookAppointment = ({ child, userdata }) => {
             <option selected style={{ display: "none" }}>
               Durata activitatii
             </option>
-            <option value={1}>1</option>
-            <option value={2}>2</option>
-            <option value={3}>3</option>
-            <option value={4}>4</option>
-            <option value={5}>5</option>
-            <option value={6}>6</option>
-            <option value={7}>7</option>
-            <option value={8}>8</option>
-            <option value={9}>9</option>
-            <option value={10}>10</option>
+            <option value={1}>1h</option>
+            <option value={2}>2h</option>
+            <option value={3}>3h</option>
+            <option value={4}>4h</option>
+            <option value={5}>5h</option>
+            <option value={6}>6h</option>
+            <option value={7}>7h</option>
+            <option value={8}>8h</option>
+            <option value={9}>9h</option>
+            <option value={10}>10h</option>
           </select>
         </div>
         <div className="input-group flex-nowrap">
           <div>
             <span className="formStyling" htmlFor="description">
-              Raport activitati:{" "}
+              Ce activitate veti face:{" "}
             </span>
           </div>
           <div>
@@ -185,7 +185,7 @@ const BookAppointment = ({ child, userdata }) => {
             className="ok input-group flex-nowrap alert alert-warning alert-dismissible fade show"
             role="alert"
           >
-            <strong>Appointment booked! </strong>
+            <strong>Activitate inregistrata! </strong>
           </div>
         )}
         <button
